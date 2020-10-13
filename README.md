@@ -1,3 +1,8 @@
+# react-flats
+This is me learning React through Le Wagon's React/Redux course.
+
+This repo was set up using Le Wagon's React boilerplate below...
+
 # react-boilerplate
 
 Simple react starter with the following config:
