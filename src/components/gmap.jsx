@@ -24,8 +24,8 @@ class Gmap extends Component {
           defaultZoom={this.props.zoom}
         >
           <Marker
-            lat={48.8566}
-            lng={2.3522}
+            lat={this.props.selectedFlatLat}
+            lng={this.props.selectedFlatLng}
           />
         </GoogleMapReact>
       </div>
