@@ -1,4 +1,4 @@
-/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import Flat from './flat';
 import flats from '../../data/flats';
@@ -11,12 +11,18 @@ class FlatList extends Component {
     }
   }
 
+  updateSelectedFlat = (flatId) => {
+    this.setState({
+      selectedFlatId: flatId
+    });
+  }
+
   render() {
     return (
       <div className="flat-list">
         {
           flats.map((flat) => {
-            return <Flat {...flat} key={flat.id} />;
+            return <Flat {...flat} key={flat.id} updateSelectedFlat={this.updateSelectedFlat} selected={flat.id === this.state.selectedFlatId} />;
           })
         }
       </div>
