@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import Flat from './flat';
 import flats from '../../data/flats';
@@ -5,16 +6,22 @@ import flats from '../../data/flats';
 class FlatList extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      selectedFlatId: null
+    }
   }
 
   render() {
     return (
       <div className="flat-list">
-        <Flat {...flats[0]} />
+        {
+          flats.map((flat) => {
+            return <Flat {...flat} />;
+          })
+        }
       </div>
     );
   }
-
 }
 
 export default FlatList;
