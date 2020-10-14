@@ -9,8 +9,7 @@ class FlatList extends Component {
 
   render() {
     return (
-      <div>
-        this is FlatList
+      <div className="flat-list">
         <Flat {...flats[0]} />
       </div>
     );
